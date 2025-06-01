@@ -1,0 +1,25 @@
+.search-input{
+    font-family: Inter, serif;
+    color: #252525;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 39px;
+    height: 35px;
+    border: 1px solid #6c63ff;
+    border-radius: 5px;
+    padding: 0 45px;
+    background:#f7f7f7;
+    outline:3px solid transparent;
+    transition: outline .2s ease, border .2s ease-in-out, color .2s ease-in-out, background-color .2s ease-in-out;
+    background-image:url("../assets/icons8-search.svg") ;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.search-input:focus{
+    outline:3px solid #6c63ff66;
+}
+.search-input::placeholder {
+    color:#6c63ff;
+    opacity: 0.3;
+
+}

@@ -1,0 +1,90 @@
+.task {
+    padding: 17px 5px;
+    border-bottom: 1px solid #6c63ff;
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+}
+@media (max-width: 800px) {
+    .task {
+        width: 100%;
+        word-break: break-all;
+    }
+
+}
+
+.task input{
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+}
+.task input:focus{
+    outline: none;
+    text-decoration: none;
+}
+.task button {
+    height: 18px;
+    width: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.edit {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+.editButton, .deleteButton svg {
+    stroke: #CDCDCD
+}
+.actions:has(.editButton:hover) .editButton svg path {
+    stroke: #6C63FF;
+}
+.actions:has(.deleteButton:hover) .deleteButton svg path {
+    stroke: #E50000;
+}
+.actions{
+    display: none;
+}
+.task:hover .actions {
+    display:flex;
+    gap: 10px;
+    margin-left: auto;
+}
+.checkbox {
+    height: 24px;
+    min-width: 24px;
+    border: 1px solid #6c63ff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.content {
+    margin: 0;
+    line-break: anywhere;
+
+}
+.inProgress{
+    background-color: #c2bffd;
+}
+
+.checked .checkbox {
+    background-color: #6c63ff;
+    background-image: url('../assets/check.svg');
+    background-repeat: no-repeat;
+    background-position: 5px 2px;
+    background-size: 15px;
+
+}
+.checked .content {
+    text-decoration: line-through;
+    color: #8e8e8e;
+}
+
