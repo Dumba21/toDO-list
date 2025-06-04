@@ -17,10 +17,14 @@ function App() {
 
     useEffect(() => {
         const localTasks = JSON.parse(localStorage.getItem("tasks"));
-        if (localTasks.length > 0) {
+        console.log(localTasks);
+        
+        if(localTasks !== null){
+             if ( localTasks.length > 0) {
             setTasks(localTasks);
             const id = localTasks[localTasks.length - 1].id + 1;
             setIdTask(id);
+        }
         }
     }, [])
 
